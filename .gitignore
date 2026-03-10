@@ -1,0 +1,115 @@
+# Python
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv*
+.python-version
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+tmp
+
+# Wandb
+.wandb
+wandb/
+
+# Model checkpoints & weights
+checkpoints/
+*.ckpt
+*.pt
+*.safetensors
+*.sft
+
+# Media files
+*.gif
+*.heic
+*.heif
+*.jpg
+*.jpeg
+*.m4a
+*.mov
+*.mp4
+*.pdf
+*.png
+!assets/*.png
+!examples/**/*.mp4
+!examples/*.png
+*.wav
+!examples/*.wav
+*.webp
+*.mkv
+*.webm
+
+# Datasets
+datasets
+datasets/
+
+# Logs
+logs/
+
+# Models (downloaded base models)
+model/
+models
+
+# Inference outputs
+outputs/
+
+# ---- Internal / experiment directories (kept on disk, excluded from git) ----
+
+# All experiment code/data
+experiments/
+
+# Ad-hoc scripts
+.scripts/
+
+# AI assistant configs
+.cursor/
+.claude/
+
+# Checkpoints (training outputs)
+ckpts/
+.checkpoints/
+
+# LaTeX source
+tex/
+
+# Git submodules / external repos
+submodules/
+external/
+
+# HuggingFace staging
+staging_hf_upload/
+
+# Chat / agent transcripts
+chat_history/
+
+# Internal docs / deployment scripts
+CLAUDE.md
+AGENTS.md
+task_setup.sh
+
+# Old root-level scripts (internal)
+scripts/resume_voxceleb_captioning.sh
+scripts/run_auditory_inference.sh
+run_one_stage.sh
+monitor_preprocess.sh
+
+# Internal docs
+ARCHITECTURE.md
+ltx2_audio_lora_eccv_strategy_v2.md
+gemini_celebvhq_captions.json
+
+# Secrets
+.env
+
+# Git submodule config (not needed in standalone repo)
+.gitmodules

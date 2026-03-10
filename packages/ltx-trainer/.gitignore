@@ -1,0 +1,20 @@
+configs/*.yaml
+!configs/ltx2_av_lora.yaml
+!configs/ltx2_av_lora_low_vram.yaml
+datasets
+outputs
+wandb
+
+# Legacy training strategies (kept on disk, excluded from git)
+src/ltx_trainer/training_strategies/audio_ic.py
+src/ltx_trainer/training_strategies/audio_ic_masked.py
+src/ltx_trainer/training_strategies/audio_video_ic.py
+src/ltx_trainer/training_strategies/first_frame_av_ic.py
+src/ltx_trainer/training_strategies/negative_pos_av_ic.py
+src/ltx_trainer/training_strategies/negative_pos_full_ref_av_ic.py
+src/ltx_trainer/training_strategies/speaker_identity_av_ic.py
+src/ltx_trainer/training_strategies/video_to_video.py
+
+# Internal docs
+AGENTS.md
+CLAUDE.md
