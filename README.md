@@ -1,4 +1,4 @@
-<h1 align="center">ID-LoRA: Identity-Preserving Audio-Video Generation</h1>
+<h1 align="center">ID-LoRA: Identity-Driven Audio-Video Personalization with In-Context LoRA</h1>
 
 <p align="center">
   <a href="https://arxiv.org/abs/2603.10256"><img src="https://img.shields.io/badge/arXiv-2603.10256-b31b1b.svg" alt="arXiv"></a>
