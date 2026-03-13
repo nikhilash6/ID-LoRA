@@ -10,6 +10,20 @@
   <img src="assets/teaser.png" alt="ID-LoRA teaser" width="720">
 </p>
 
+## TL;DR
+
+**ID-LoRA** enables identity-preserving **audio–video generation in a single model**.  
+Given a **text prompt, reference image, and short audio clip**, it generates a talking video where the **voice sounds like the reference speaker and the face matches the subject**.
+
+- 🎤 **Voice identity transfer** from a short reference audio
+- 🧑 **Visual identity control** via first-frame conditioning
+- 🎬 **Unified audio–video diffusion** (not cascaded pipelines)
+- ⚡ **Zero-shot inference** — load LoRA weights, no per-speaker training
+- 🪶 **Lightweight** — trained on ~3K pairs on a single GPU
+
+Built on **LTX-2** with **In-Context LoRA** for identity conditioning.
+
+
 ## Overview
 
 **ID-LoRA** (Identity-Driven In-Context LoRA) jointly generates a subject's appearance and voice in a single model, letting a text prompt, a reference image, and a short audio clip govern both modalities together. Built on top of [LTX-2](https://github.com/Lightricks/LTX-Video), it is the first method to personalize visual appearance and voice within a single generative pass.
