@@ -48,11 +48,21 @@ Key features:
 - [ ] Evaluation datasets and benchmark splits (CelebV-HQ v3.2 eval, TalkVid eval) -- HuggingFace Datasets
 - [ ] Evaluation scripts
 
+## 🐛 Recent Fixes
+
+> **If you cloned this repo before these fixes**, pull the latest changes to get them:
+> ```bash
+> git pull origin main
+> ```
+
+- **Missing `ltx_core.model` subpackage**: The core model code (`ltx_core.model`) from [LTX-Video](https://github.com/Lightricks/LTX-Video) was not included in the repository, causing `ModuleNotFoundError: No module named 'ltx_core.model'`. This has been added.
+- **Audio loading fix**: Replaced `torchaudio.load()` with `soundfile` in inference scripts to avoid a `torchcodec`/FFmpeg dependency issue that caused `RuntimeError: Could not load libtorchcodec` on systems without a system-wide FFmpeg installation.
+
 ## 🛠️ Installation
 
 ### 📋 Prerequisites
 
-- Python 3.10+
+- Python 3.11+
 - CUDA 12.x with 24+ GB VRAM (48 GB recommended for two-stage)
 - [uv](https://docs.astral.sh/uv/) package manager
 
@@ -74,7 +84,7 @@ ID-LoRA requires the base LTX-2 model and supporting components:
 mkdir -p models
 
 # Base model (required)
-huggingface-cli download Lightricks/LTX-Video \
+huggingface-cli download Lightricks/LTX-2 \
   ltx-2-19b-dev.safetensors --local-dir models
 
 # Text encoder (required)
@@ -82,11 +92,11 @@ huggingface-cli download google/gemma-3-12b-it-qat-q4_0-unquantized \
   --local-dir models/gemma-3-12b-it-qat-q4_0-unquantized
 
 # Spatial upscaler (for two-stage pipeline)
-huggingface-cli download Lightricks/LTX-Video \
+huggingface-cli download Lightricks/LTX-2 \
   ltx-2-spatial-upscaler-x2-1.0.safetensors --local-dir models
 
 # Distilled LoRA (for two-stage pipeline)
-huggingface-cli download Lightricks/LTX-Video \
+huggingface-cli download Lightricks/LTX-2 \
   ltx-2-19b-distilled-lora-384.safetensors --local-dir models
 
 # ID-LoRA checkpoint (pick one or both)
