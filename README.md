@@ -26,6 +26,7 @@ We released a [ComfyUI custom node](https://github.com/ID-LoRA/ID-LoRA-LTX2.3-Co
 
 <p align="center">
   <b>🎬 ID-LoRA in action — identity-preserving talking video from a single image and short audio clip:</b>
+  
   Input voice sample:
   [reference_voice.mp3](https://github.com/user-attachments/files/26160958/reference_voice.mp3)
 
