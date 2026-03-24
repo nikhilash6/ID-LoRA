@@ -15,9 +15,9 @@
 
 We now support **LTX-2.3** (22B parameters), the latest LTX video model. ID-LoRA 2.3 brings **improved text conditioning**, **better audio quality**, and a new **Two-Stage HQ** inference mode for higher fidelity output. Pre-trained checkpoints for CelebV-HQ and TalkVid are available on [HuggingFace](https://huggingface.co/AviadDahan). See [ID-LoRA-2.3/README.md](ID-LoRA-2.3/README.md) for setup and usage.
 
-We released a [ComfyUI custom node](https://github.com/ID-LoRA/ID-LoRA-LTX2.3-ComfyUI) for ID-LoRA with LTX-2.3 enabling node-based workflows with full support for one-stage, two-stage, and two-stage HQ inference. 
+We released a [ComfyUI custom node](https://github.com/ID-LoRA/ID-LoRA-LTX2.3-ComfyUI) for ID-LoRA with LTX-2.3 enabling node-based workflows with full support for one-stage, two-stage, and two-stage HQ inference.
 
-<mark>Stay tuned</mark> for native ComfyUI integration.
+**Update — March 24, 2026:** Native ComfyUI ID-LoRA support for LTX2 is now in upstream [ComfyUI](https://github.com/Comfy-Org/ComfyUI), merged in [PR #13111](https://github.com/Comfy-Org/ComfyUI/pull/13111). It adds the **LTXVReferenceAudio** node for reference-audio speaker identity transfer; original ID-LoRA weights work as-is with no conversion. Thank you to **[Kijai](https://github.com/kijai)** for implementing and contributing this integration.
 
 ---
 
@@ -76,7 +76,7 @@ Key features:
 - [x] Training datasets (CelebV-HQ preprocessed, TalkVid preprocessed) -- HuggingFace Datasets
 - [x] LTX-2.3 support (22B model, two-stage HQ inference)
 - [x] ComfyUI custom node support ([ID-LoRA-LTX2.3-ComfyUI](https://github.com/ID-LoRA/ID-LoRA-LTX2.3-ComfyUI))
-- [ ] ComfyUI native integration 
+- [x] ComfyUI native integration ([PR #13111](https://github.com/Comfy-Org/ComfyUI/pull/13111), thanks [Kijai](https://github.com/kijai))
 - [ ] Evaluation datasets and benchmark splits (CelebV-HQ v3.2 eval, TalkVid eval) -- HuggingFace Datasets
 - [ ] Evaluation scripts
 
@@ -478,6 +478,7 @@ This project is licensed under the terms of the [LICENSE](LICENSE) file.
 
 ## 🙏 Acknowledgments
 
+- Native ComfyUI support for ID-LoRA / LTX2 ([PR #13111](https://github.com/Comfy-Org/ComfyUI/pull/13111)): [Kijai](https://github.com/kijai)
 - Built on [LTX-2](https://github.com/Lightricks/LTX-2) by Lightricks
 - Text encoder: [Gemma 3](https://ai.google.dev/gemma) by Google
 - Speaker verification: [WavLM](https://github.com/microsoft/unilm/tree/master/wavlm) + ECAPA-TDNN
